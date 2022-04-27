@@ -1,0 +1,13 @@
+{
+    "batch_size": 64,
+    "epochs": 500,
+    "learning_rate": 1e-05,
+    "weight_decay": 1e-05,
+    "learning_rate_decay_rate": 0.96,
+    "learning_rate_decay": true,
+    "optimizer": "adamax",
+    "feature_extractor": "resnext101",
+    "exp_name": "resnext101-shallow-64-adamax-1e-05-wd",
+    "model_type": "nn",
+    "architecture_type": "shallow"
+}

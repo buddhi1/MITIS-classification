@@ -1,0 +1,11 @@
+{
+    "n_estimator": 1000,
+    "criterion": "entropy",
+    "feature_extractor": "resnext101",
+    "exp_name": "resnext101-1000-entropy-100",
+    "model_type": "random-forest",
+    "max_depth": 100,
+    "train_time": 135.5070083141327,
+    "train_pred_time": 1.1618459224700928,
+    "test_pred_time": 0.6948733329772949
+}

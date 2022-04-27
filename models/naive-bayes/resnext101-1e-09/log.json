@@ -1,0 +1,9 @@
+{
+    "var_smoothing": 1e-09,
+    "feature_extractor": "resnext101",
+    "exp_name": "resnext101-1e-09",
+    "model_type": "naive-bayes",
+    "train_time": 0.10061502456665039,
+    "train_pred_time": 5.0515055656433105,
+    "test_pred_time": 1.5693154335021973
+}
