@@ -9,9 +9,11 @@ import pandas as pd
 import csv
 import os
 import matplotlib.pyplot as plt
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, classification_report
 import time
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 from pylab import rcParams
+import sys
 
 rcParams['figure.figsize'] = 20, 20
 
@@ -126,10 +128,27 @@ def create_confusion_matrix(name, model, validation_generator):
 	y_true=validation_generator.classes
 	cm=confusion_matrix(y_true, y_pred)
 
+	report = classification_report(y_true, y_pred, target_names=list(validation_generator.class_indices.keys()),output_dict=True)
+	df_classification_report = pd.DataFrame(report).transpose()
+	# df_classification_report = pd.DataFrame(report)
+	accuracy_report = df_classification_report.tail(3)
+	# accuracy_report = df_classification_report
+	accuracy_report.to_csv('models/cnn/'+name+'_report.csv')
+
+	df_classification_report.drop(df_classification_report.tail(3).index, inplace=True)
+	df_classification_report = df_classification_report.sort_values(by=['f1-score'], ascending=False)
+	df_classification_report.to_csv('models/cnn/'+name+'train_classification_report.csv')
+
+
 	plot_confusion_matrix(cm, list(validation_generator.class_indices.keys()), 'models/cnn/', 'test-'+name)
 
+def save_eval_metrics():
+	self.accuracy = accuracy_score(y_true, y_pred)
+	self.precision = precision_score(y_true, y_pred, average='weighted')
+	self.recall = recall_score(y_true, y_pred, average='weighted')
+	self.f1_score = f1_score(y_true, y_pred, average='weighted')
 
-def run():
+def run(train):
 	name="MIT-Xception-avg-depthw-constraints-512"
 	prepare_data()
 	#Set data augmentation techniques
@@ -168,7 +187,7 @@ def run():
 	train_img_num=len(train_generator.filenames)
 	model=createModel(train_img_num, batch_size)
 	model.summary()
-	train=False
+
 	if(train):
 
 		# filepath="models/cnn/%s-{epoch:02d}-{val_accuracy:.4f}.hdf5"%name
@@ -178,8 +197,8 @@ def run():
 		callbacks_list = [checkpoint]
 
 		train_start_time = time.time()
-		# hist=model.fit_generator(train_generator, epochs=130,validation_data=validation_generator,shuffle=True,callbacks=callbacks_list) #start training
-		hist=model.fit(train_generator, epochs=1,validation_data=validation_generator,shuffle=True,callbacks=callbacks_list) #start training
+		hist=model.fit_generator(train_generator, epochs=130,validation_data=validation_generator,shuffle=True,callbacks=callbacks_list) #start training
+		# hist=model.fit(train_generator, epochs=1,validation_data=validation_generator,shuffle=True,callbacks=callbacks_list) #start training
 		train_time = time.time() - train_start_time
 
 		#write reports
@@ -202,8 +221,16 @@ def run():
 	print('Confusion Matrix Plotting...')
 	create_confusion_matrix(name, model, validation_generator)
 
-	print('Training Complete!!!')
+
+
+	print('Task Complete!!!')
 
 
 if __name__ == '__main__':
-	run()
+	train=True
+
+	if len(sys.argv) == 2:
+		if sys.argv[1] == 'load':
+			train=False
+
+	run(train)

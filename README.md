@@ -7,22 +7,32 @@ Group Members: Desiree Garcia, Buddhi Ashan Mallika Kankanamalage, Heila Shahidi
 MIT Indoor Scenes (MITIS)[1] is an image dataset with 67 indoor categories. We propose to compare five Artificial Intelligence (AI) methodologies to predict the indoor category of the MITIS images and evaluate the quality of predictions using different evaluation matrices. To improve prediction quality in traditional classification models, we propose to use Deep Learning Neural Network (DNN) based feature extractors. In this work, we present a comparison of different AI models based on their classification accuracies on MITIS dataset.
 
 We propose following well known models to classify the MITIS dataset. 
- * Convolutional Neural Network (CNN)[3]
- * Support Vector Machine (SVM)[2]
- * Artificial Neural Network (ANN) [2]
- * Random Forest (RF)[2]
- * Naive Bayes[2]
+ * Convolutional Neural Network (CNN)[2]
+ * Support Vector Machine (SVM)[3]
+ * Artificial Neural Network (ANN) [3]
+ * Random Forest (RF)[3]
+ * Naive Bayes[3]
+
+## How to Run the Models
+-- Create anaconda environment with the given yml file using conda env create -f environment.yml. 
+-- Download Feature file from here and place it in the Dataset directory.
+-- To avoid training the CNN, download weight file from here and place it in models/cnn directory
+-- To train all models and generate evaluation matrices, use python  python train_models.py all
+-- To train only selected models, use python train_models.py {randomforest, naivebayes, svm, nn, cnn}
+-- To only evaluate CNN, use python cnn load
 
 
 ## Experimental Setup
+Our experimental setup was a Xeon silver equipped workstation with Nvidia Quadro A500 GPU car with 64 GB of memory. 
 We propose to use a confusion matrix to evaluate each model.
+
+## Acknowledge
+We would like to acknowledge contributions from Gamage [3] and Rahimzadeh at al. [2] as well as making their implementations publicly available through git hub. 
 
 
 ## References
-[1] A. Quattoni, and A.Torralba. Recognizing Indoor Scenes. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2009.
-[2] Gamage, Bhanuka Manesha Samarasekara Vitharana. "An embarrassingly simple comparison of machine learning algorithms for indoor scene classification." arXiv preprint arXiv:2109.12261 (2021).
-[3] Rahimzadeh, Mohammad, et al. "Wise-srnet: A novel architecture for enhancing image classification by learning spatial resolution of feature maps." arXiv preprint arXiv:2104.12294 (2021).
+[1] A. Quattoni, and A.Torralba. Recognizing Indoor Scenes. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2009.<br />
+[2] Rahimzadeh, Mohammad, et al. "Wise-srnet: A novel architecture for enhancing image classification by learning spatial resolution of feature maps." arXiv preprint arXiv:2104.12294 (2021).<br />
+[3] Gamage, Bhanuka Manesha Samarasekara Vitharana. "An embarrassingly simple comparison of machine learning algorithms for indoor scene classification." arXiv preprint arXiv:2109.12261 (2021).
 
 ***
-Proposal Document: https://docs.google.com/document/d/1G4tkbP8Xs_Y1_NbZ36KO9MV_XRzYXW0rQVyKp0UIC-0/edit?usp=sharing 
-Miscellaneous Document: 
