@@ -7,19 +7,31 @@ Group Members: Desiree Garcia, Buddhi Ashan Mallika Kankanamalage, Heila Shahidi
 MIT Indoor Scenes (MITIS)[1] is an image dataset with 67 indoor categories. We propose to compare five Artificial Intelligence (AI) methodologies to predict the indoor category of the MITIS images and evaluate the quality of predictions using different evaluation matrices. To improve prediction quality in traditional classification models, we propose to use Deep Learning Neural Network (DNN) based feature extractors. In this work, we present a comparison of different AI models based on their classification accuracies on MITIS dataset.
 
 We propose following well known models to classify the MITIS dataset. 
-    * Convolutional Neural Network (CNN)[2]
-    * Support Vector Machine (SVM)[3]
-    * Artificial Neural Network (ANN) [3]
-    * Random Forest (RF)[3]
-    * Naive Bayes[3]
+* Convolutional Neural Network (CNN)[2]
+* Support Vector Machine (SVM)[3]
+* Artificial Neural Network (ANN) [3]
+* Random Forest (RF)[3]
+* Naive Bayes[3]
 
 ## How to Run the Models
-    - Create anaconda environment with the given yml file using *conda env create -f environment.yml*. 
-    - Download Feature file from here and place it in the Dataset directory.
-    - To avoid training the CNN, download weight file from here and place it in models/cnn directory
-    - To train all models and generate evaluation matrices, use *python  python train_models.py all*
-    - To train only selected models, use *python train_models.py {randomforest, naivebayes, svm, nn, cnn}*
-    - To only evaluate CNN, use *python train_models.py cnn load*
+- Create anaconda environment with the given yml file using 
+```
+conda env create -f environment.yml
+```
+- Download Feature file from here and place it in the Dataset directory.
+- To avoid training the CNN, download weight file from here and place it in models/cnn directory
+- To train all models and generate evaluation matrices, use 
+```
+python  python train_models.py all
+```
+- To train only selected models, use 
+```
+python train_models.py {randomforest, naivebayes, svm, nn, cnn}
+```
+- To only evaluate CNN, use 
+```
+python train_models.py cnn load
+```
 
 
 ## Experimental Setup
