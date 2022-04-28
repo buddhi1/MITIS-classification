@@ -8,7 +8,8 @@ import pandas as pd
 from pathlib import Path
 import matplotlib.pyplot as plt
 from pylab import rcParams
-rcParams['figure.figsize'] = 20, 20
+# rcParams['figure.figsize'] = 20, 20
+rcParams['figure.figsize'] = 15, 15
 
 def results(x_true, x_pred, y_true, y_pred, classes, params, path=None, name=None):
 
@@ -73,6 +74,7 @@ def results(x_true, x_pred, y_true, y_pred, classes, params, path=None, name=Non
     # Confusion matrix
     cm = confusion_matrix(y_true, y_pred_)
     plot_confusion_matrix(cm, classes, path=path, name='test-'+name)
+    # plot_confusion_matrix(cm, list(range(len(classes))), path=path, name='test-'+name)
 
 def get_color(idx):
     if idx < 10:
@@ -128,7 +130,7 @@ def plot_confusion_matrix(cm, classes, path, name, normalize=False, title='Confu
 
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)
-    plt.colorbar()
+    plt.colorbar(shrink=0.75)
     tick_marks = np.arange(len(classes))
     plt.xticks(tick_marks, classes, rotation=90)
     plt.yticks(tick_marks, classes)

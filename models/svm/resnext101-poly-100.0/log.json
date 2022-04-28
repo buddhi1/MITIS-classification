@@ -4,7 +4,7 @@
     "feature_extractor": "resnext101",
     "exp_name": "resnext101-poly-100.0",
     "model_type": "svm",
-    "train_time": 18.37918996810913,
-    "train_pred_time": 39.0931339263916,
-    "test_pred_time": 10.057841777801514
+    "train_time": 17.777891159057617,
+    "train_pred_time": 36.14803981781006,
+    "test_pred_time": 9.325717687606812
 }

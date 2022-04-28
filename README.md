@@ -2,16 +2,35 @@
 
 **Group Members**: Desiree Garcia, Buddhi Ashan Mallika Kankanamalage, Heila Shahidi, Paul Woody, Mark Zimmerschied
 
-## Problem Statement
+## Abstract
+The importance of spatial recognition is an emerging field that heavily relies on machine learning and deep learning models. Examples such as catching human trafficking predators to reorganizing furniture without moving a single piece, are all applications to what spatial recognition can achieve. With an array of research studies conducting simulations using the MIT Indoor Scene (MITIS) dataset on different models and architectures, our research has homed in on the best five models that encapsulate the highest accuracies. Models will include Support Vector Machine (SVM), Naïve Bayes, Random Forest, and Neural Network (NN) from Gamage [3], as well as a Convolutional Neural Network (CNN) from Rahimzadeh et al. [2].
 
-MIT Indoor Scenes (MITIS)[1] is an image dataset with 67 indoor categories. We propose to compare five Artificial Intelligence (AI) methodologies to predict the indoor category of the MITIS images and evaluate the quality of predictions using different evaluation matrices. To improve prediction quality in traditional classification models, we propose to use Deep Learning Neural Network (DNN) based feature extractors. In this work, we present a comparison of different AI models based on their classification accuracies on MITIS dataset.
+## Introduction
+Scene classification is a subfield of classification where scenes from photographs are categorically classified based on the layout of objects within the scene. A tool such as scene classification can have an array of uses and benefits that could change the dynamic of how spatial area is used on the Internet of Things. Examples include, E-commerce sites utilizing scene classification to showcase specific items into a categorically relevant scene. As well as law enforcement tracking human traffickers using Google Map pictures taken from hotel rooms. ​
 
-We propose following well known models to classify the MITIS dataset. 
+MITIS contains a total of 15,620 images categorized into 67 indoor categories with each category containing at least 100 images. Other noteworthy datasets are Places205 with 205 scene categories and 2.5 millions images, and Places365-Standard with 365 scene categories and 1.8 million images.​
+
+## Purpose
+Objective of this work is to study state-of-the-art algorithms which can be used to classify the MITIS dataset. We chose five models with highest classification accuracies where the training and testing codes were publicly available. In this work we present a comparison of the classification models using different evaluation matrices. ​
+
+## Methodology
+The MITIS dataset consists of 5360 train images and 1340 test images. We use the same split as published in [1]. Following are the five models used in this study.​
+
 * Convolutional Neural Network (CNN)[2]
 * Support Vector Machine (SVM)[3]
 * Artificial Neural Network (ANN) [3]
 * Random Forest (RF)[3]
 * Naive Bayes[3]
+
+Our evaluation measures the quality of the classification using different matrices.
+
+## Results
+
+## Summary
+* Best model accuracy was Neural Network​
+* Best model F1-score was Support Vector Machine​
+* Fastest model to train is Naive Bayes
+
 
 ## How to Run the Models
 - Download MITIS dataset from <a href="https://www.kaggle.com/datasets/itsahmad/indoor-scenes-cvpr-2019">here</a>. Unzip the downloaded file and locate it outside master directory. 
