@@ -141,6 +141,7 @@ def create_confusion_matrix(name, model, validation_generator):
 
 
 	plot_confusion_matrix(cm, list(validation_generator.class_indices.keys()), 'models/cnn/', 'test-'+name)
+	# plot_confusion_matrix(cm, list(range(len(validation_generator.class_indices.keys()))), 'models/cnn/', 'test-'+name)
 
 def save_eval_metrics():
 	self.accuracy = accuracy_score(y_true, y_pred)
@@ -212,16 +213,14 @@ def run(train):
 	else:
 		# load weights of the best model
 		model.load_weights("models/cnn/MIT-Xception-avg-depthw-constraints-512-64.hdf5")
-	print('Evaluating...')
-	draw_metrics('models/cnn/', name)
-	# evaluate model
-	loss, accuracy=model.evaluate(validation_generator)
-	print('Loss: '+str(loss)+'\nAccuracy: '+str(accuracy))
+	# print('Evaluating...')
+	# draw_metrics('models/cnn/', name)
+	# # evaluate model
+	# loss, accuracy=model.evaluate(validation_generator)
+	# print('Loss: '+str(loss)+'\nAccuracy: '+str(accuracy))
 
 	print('Confusion Matrix Plotting...')
 	create_confusion_matrix(name, model, validation_generator)
-
-
 
 	print('Task Complete!!!')
 

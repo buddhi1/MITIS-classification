@@ -14,6 +14,7 @@ We propose following well known models to classify the MITIS dataset.
 * Naive Bayes[3]
 
 ## How to Run the Models
+- Download MITIS dataset from <a href="https://www.kaggle.com/datasets/itsahmad/indoor-scenes-cvpr-2019">here</a>. Unzip the downloaded file and locate it outside master directory. 
 - Create anaconda environment with the given yml file using 
 ```
 conda env create -f environment.yml
@@ -35,7 +36,7 @@ python train_models.py cnn load
 
 
 ## Experimental Setup
-Our experimental setup was a Xeon silver equipped workstation with Nvidia Quadro A500 GPU car with 64 GB of memory. 
+Our experimental setup was a Xeon silver equipped workstation with Nvidia Quadro A500 GPU card with 64 GB of memory. 
 We propose to use a confusion matrix to evaluate each model.
 
 ## Acknowledgements 
