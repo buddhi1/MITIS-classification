@@ -1,6 +1,6 @@
 # A Survey on MITIS Image Classification Using Different Artificial Intelligence Models
 
-Group Members: Desiree Garcia, Buddhi Ashan Mallika Kankanamalage, Heila Shahidi, Paul Woody, Mark Zimmerschied
+**Group Members**: Desiree Garcia, Buddhi Ashan Mallika Kankanamalage, Heila Shahidi, Paul Woody, Mark Zimmerschied
 
 ## Problem Statement
 
@@ -18,8 +18,8 @@ We propose following well known models to classify the MITIS dataset.
 ```
 conda env create -f environment.yml
 ```
-- Download Feature file from here and place it in the Dataset directory.
-- To avoid training the CNN, download weight file from here and place it in models/cnn directory
+- Download Feature file from <a href="https://drive.google.com/file/d/1Yt8boWVIr_WHCqlRB0BtePqysdtwwYOw/view?usp=sharing">here</a> and place it in the Dataset directory.
+- To avoid training the CNN, download weight file from <a href="https://drive.google.com/file/d/1uAGiIaYTBrvoHPY0SNnCDaanjiZEk9u3/view?usp=sharing">here</a> and place it in models/cnn directory
 - To train all models and generate evaluation matrices, use 
 ```
 python  python train_models.py all
@@ -38,7 +38,7 @@ python train_models.py cnn load
 Our experimental setup was a Xeon silver equipped workstation with Nvidia Quadro A500 GPU car with 64 GB of memory. 
 We propose to use a confusion matrix to evaluate each model.
 
-## Acknowledge
+## Acknowledgements 
 We would like to acknowledge contributions from Gamage [3] and Rahimzadeh at al. [2] as well as making their implementations publicly available through git hub. 
 
 
