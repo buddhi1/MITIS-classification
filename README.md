@@ -77,8 +77,11 @@ We would like to acknowledge contributions from Gamage [3] and Rahimzadeh at al.
 
 
 ## References
-[1] A. Quattoni, and A.Torralba. Recognizing Indoor Scenes. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2009.<br />
-[2] Rahimzadeh, Mohammad, et al. "Wise-srnet: A novel architecture for enhancing image classification by learning spatial resolution of feature maps." arXiv preprint arXiv:2104.12294 (2021).<br />
-[3] Gamage, Bhanuka Manesha Samarasekara Vitharana. "An embarrassingly simple comparison of machine learning algorithms for indoor scene classification." arXiv preprint arXiv:2109.12261 (2021).
+[1] A. Quattoni, and A.Torralba. Recognizing Indoor Scenes. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2009.​
 
+[2] Rahimzadeh, Mohammad, et al. "Wise-srnet: A novel architecture for enhancing image classification by learning spatial resolution of feature maps." arXiv preprint arXiv:2104.12294 (2021).​
+
+[3] Gamage, Bhanuka Manesha Samarasekara Vitharana. "An embarrassingly simple comparison of machine learning algorithms for indoor scene classification." arXiv preprint arXiv:2109.12261 (2021).​
+
+[4] López-Cifuentes, A., Escudero-Viñolo, M., Bescós, J., & García-Martín, Á. (2020). Semantic-aware scene recognition. Pattern Recognition, 102, 107256.​
 ***
