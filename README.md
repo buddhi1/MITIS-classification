@@ -15,7 +15,7 @@ Scene classification is a challenging task in computer vision due to ambiguity, 
 Scene classification is the task of labeling an image based on a predefined category. This work focuses on indoor scene classification using the MITIS dataset which consists of 15,620 images categorized into 67 indoor categories with each category containing at least 100 images. Other noteworthy datasets are Places205 with 205 scene categories and 2.5 millions images, and Places365-Standard with 365 scene categories and 1.8 million images.​
 
 Boundaries between some scenes are hard to define and some objects can appear in multiple scene categories. Therefore, this task requires identifying distinctive characteristics and similarities between same class images [3].  DNN approaches such as Convolutional Neural Networks (CNN) have proved this kind of behavior [3, 4]. In this work, we compare five Artificial Intelligence (AI) models using different evaluation matrices. 
-![](/images/table.png)
+![Sample](https://user-images.githubusercontent.com/45516923/165963763-ddd23c1f-a4b6-4d9f-9db6-a9241e9f8d44.PNG)
 
 ## Purpose
 Objective of this work is to study state-of-the-art algorithms which can be used to classify the MITIS dataset. We chose five models with highest classification accuracies where the training and testing codes were publicly available. In this work we present a comparison of the classification models using different evaluation matrices. 
