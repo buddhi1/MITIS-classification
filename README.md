@@ -69,7 +69,6 @@ python train_models.py cnn load
 
 ## Experimental Setup
 Our experimental setup was a Intel(R) Xeon(R) Silver 4210R CPU @ 2.40GHz equipped workstation with Nvidia Quadro RTX 5000 GPU card with 64GB of memory. 
-We compared the models using accuracy, precision, recall, and F1-score for both weighted and macro. 
 
 
 ## Acknowledgements 
