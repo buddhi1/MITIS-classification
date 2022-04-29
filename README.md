@@ -32,7 +32,11 @@ The MITIS dataset consists of 5360 train images and 1340 test images. We use the
 The traditional models uses feature descriptors extracted from RESNetXt-101, which is a well-known CNN. The CNN model is a transfer learning based Xception model and fine-tuned to improve efficiency. Comparison is based on accuracy, precision, recall, and F1-score matrices. Since this is a multi-class classification, we used weighted and macro approaches. 
 
 ## Results
+![Weighted](https://user-images.githubusercontent.com/45516923/165962363-239b8b64-7f99-4d3a-b951-c1eb67e038ea.PNG)
+
 ![Marco](https://user-images.githubusercontent.com/45516923/165961896-347a7b6d-b197-45a7-befd-b141adbad107.PNG)
+
+
 
 ## Summary
 * SVM outperforms all models with highest evaluation matrices in both weighted and macro​
