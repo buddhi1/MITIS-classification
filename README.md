@@ -2,19 +2,26 @@
 
 **Group Members**: Desiree Garcia, Buddhi Ashan Mallika Kankanamalage, Heila Shahidi, Paul Woody, Mark Zimmerschied
 
+## Posterboard Presentation
+xxxxxxxx
+
+## Posterboard Link
+https://tinyurl.com/yckhrepm
+
 ## Abstract
-The importance of spatial recognition is an emerging field that heavily relies on machine learning and deep learning models. Examples such as catching human trafficking predators to reorganizing furniture without moving a single piece, are all applications to what spatial recognition can achieve. With an array of research studies conducting simulations using the MIT Indoor Scene (MITIS) dataset on different models and architectures, our research has homed in on the best five models that encapsulate the highest accuracies. Models will include Support Vector Machine (SVM), Naïve Bayes, Random Forest, and Neural Network (NN) from Gamage [3], as well as a Convolutional Neural Network (CNN) from Rahimzadeh et al. [2].
+Scene classification is a challenging task in computer vision due to ambiguity, variability, scale variations, and different illumination conditions. Also, significant differences between the same class images makes this problem harder. To reduce complexity of this problem, sub categorized datasets have been published. This work focuses on indoor scene classification using MIT Indoor Scene (MITIS) dataset. Recent advancement in Deep Neural Networks (DNN) have enhanced the performance of scene classification even though its performance is still low compared to some other image classification problems. This study encapsulates a comparison of state-of-the-art algorithms for scene classification. Our experiments show that ResNetXt-101 feature descriptor-based Support Vector Machine (SVM) outperforms other selected models with 76% accuracy. ​
 
 ## Introduction
-Scene classification is a subfield of classification where scenes from photographs are categorically classified based on the layout of objects within the scene. A tool such as scene classification can have an array of uses and benefits that could change the dynamic of how spatial area is used on the Internet of Things. Examples include, E-commerce sites utilizing scene classification to showcase specific items into a categorically relevant scene. As well as law enforcement tracking human traffickers using Google Map pictures taken from hotel rooms. ​
+Scene classification is the task of labeling an image based on a predefined category. This work focuses on indoor scene classification using the MITIS dataset which consists of 15,620 images categorized into 67 indoor categories with each category containing at least 100 images. Other noteworthy datasets are Places205 with 205 scene categories and 2.5 millions images, and Places365-Standard with 365 scene categories and 1.8 million images.​
 
-MITIS contains a total of 15,620 images categorized into 67 indoor categories with each category containing at least 100 images. Other noteworthy datasets are Places205 with 205 scene categories and 2.5 millions images, and Places365-Standard with 365 scene categories and 1.8 million images.​
+Boundaries between some scenes are hard to define and some objects can appear in multiple scene categories. Therefore, this task requires identifying distinctive characteristics and similarities between same class images [3].  DNN approaches such as Convolutional Neural Networks (CNN) have proved this kind of behavior [3, 4]. In this work, we compare five Artificial Intelligence (AI) models using different evaluation matrices. 
+![](/images/table.png)
 
 ## Purpose
-Objective of this work is to study state-of-the-art algorithms which can be used to classify the MITIS dataset. We chose five models with highest classification accuracies where the training and testing codes were publicly available. In this work we present a comparison of the classification models using different evaluation matrices. ​
+Objective of this work is to study state-of-the-art algorithms which can be used to classify the MITIS dataset. We chose five models with highest classification accuracies where the training and testing codes were publicly available. In this work we present a comparison of the classification models using different evaluation matrices. 
 
 ## Methodology
-The MITIS dataset consists of 5360 train images and 1340 test images. We use the same split as published in [1]. Following are the five models used in this study.​
+The MITIS dataset consists of 5360 train images and 1340 test images. We use the same split as published in [1]. Following are the five models used in this study.
 
 * Convolutional Neural Network (CNN)[2]
 * Support Vector Machine (SVM)[3]
@@ -22,14 +29,15 @@ The MITIS dataset consists of 5360 train images and 1340 test images. We use the
 * Random Forest (RF)[3]
 * Naive Bayes[3]
 
-Our evaluation measures the quality of the classification using different matrices.
+The traditional models uses feature descriptors extracted from RESNetXt-101, which is a well-known CNN. The CNN model is a transfer learning based Xception model and fine-tuned to improve efficiency. Comparison is based on accuracy, precision, recall, and F1-score matrices. Since this is a multi-class classification, we used weighted and macro approaches. 
 
 ## Results
 
 ## Summary
-* Best model accuracy was Neural Network​
-* Best model F1-score was Support Vector Machine​
-* Fastest model to train is Naive Bayes
+* SVM outperforms all models with highest evaluation matrices in both weighted and macro​
+* Fastest model to train is Naive Bayes​
+* SVM support is 1338​
+* SVM training time is relatively faster. But feature extraction can be a bottleneck  
 
 
 ## How to Run the Models
