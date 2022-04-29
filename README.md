@@ -36,7 +36,7 @@ The traditional models uses feature descriptors extracted from RESNetXt-101, whi
 
 ![Marco](https://user-images.githubusercontent.com/45516923/165961896-347a7b6d-b197-45a7-befd-b141adbad107.PNG)
 
-
+![Matrix](https://user-images.githubusercontent.com/45516923/165963298-26ade3fc-6cc0-4978-8f69-95a1a50f2d1e.PNG)
 
 ## Summary
 * SVM outperforms all models with highest evaluation matrices in both weighted and macro​
