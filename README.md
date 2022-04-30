@@ -3,7 +3,7 @@
 **Group Members**: Desiree Garcia, Buddhi Ashan Mallika Kankanamalage, Heila Shahidi, Paul Woody, Mark Zimmerschied
 
 ## Posterboard Presentation
-[![Watch the video]()](https://www.youtube.com/watch?v=rByLzzjevkA)
+[![Watch the video](https://github.com/buddhi1/MITIS-classification/tree/master/images/Slide1.jpg)](https://www.youtube.com/watch?v=rByLzzjevkA)
 
 ## Posterboard Link
 https://tinyurl.com/yckhrepm
